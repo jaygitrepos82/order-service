@@ -1,5 +1,7 @@
 package com.eshop.order_service.entity;
 
+import com.eshop.order_service.dto.Customer;
+import com.eshop.order_service.dto.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,5 +28,10 @@ public class Order {
     private Long productId;
     private Long customerId;
 
+    @Transient
+    private Product productDetails;
+
+    @Transient
+    private Customer customerDetails;
     // Getters and Setters
 }
