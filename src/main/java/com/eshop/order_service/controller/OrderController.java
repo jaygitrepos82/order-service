@@ -49,7 +49,7 @@ public class OrderController {
         logger.info("In Controller: getOrder = " + orderId);
         logger.info("In Controller: getOrder: getTotalPrice = " + order.getTotalPrice());
         try {
-            // Fetch product and customer details using product_id and customer_id
+            // Fetch product and customer details using product_id and customer_id...
             Product product = restTemplate.getForObject("http://localhost:8080/api/products/" + order.getProductId(), Product.class);
             Customer customer = restTemplate.getForObject("http://localhost:9000/api/customers/" + order.getCustomerId(), Customer.class);
 
